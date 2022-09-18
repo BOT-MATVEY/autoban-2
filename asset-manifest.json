@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/BOT-MATVEY/autoban-react/static/css/main.f9497578.css",
+    "main.js": "/BOT-MATVEY/autoban-react/static/js/main.df9ca3f0.js",
+    "static/js/787.4dfaa428.chunk.js": "/BOT-MATVEY/autoban-react/static/js/787.4dfaa428.chunk.js",
+    "static/media/map-bg.png": "/BOT-MATVEY/autoban-react/static/media/map-bg.977bc939dcdd7ae0cf6a.png",
+    "index.html": "/BOT-MATVEY/autoban-react/index.html",
+    "static/media/flag.svg": "/BOT-MATVEY/autoban-react/static/media/flag.7ad392221b60a1f7013b.svg",
+    "static/media/list-style.svg": "/BOT-MATVEY/autoban-react/static/media/list-style.880c40c5c7ecb5754de6.svg",
+    "main.f9497578.css.map": "/BOT-MATVEY/autoban-react/static/css/main.f9497578.css.map",
+    "main.df9ca3f0.js.map": "/BOT-MATVEY/autoban-react/static/js/main.df9ca3f0.js.map",
+    "787.4dfaa428.chunk.js.map": "/BOT-MATVEY/autoban-react/static/js/787.4dfaa428.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9497578.css",
+    "static/js/main.df9ca3f0.js"
+  ]
+}
