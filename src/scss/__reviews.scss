@@ -1,0 +1,131 @@
+@media (max-width: 959px) {
+  .reviews {
+    &__cards {
+      width: 100%;
+      justify-content: flex-start !important;
+      align-items: center;
+      overflow-x: scroll;
+      height: 290px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      margin-top: 32px;
+    }
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include general-margin-top();
+
+  &__cards {
+    display: flex;
+    gap: 20px;
+
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    margin-top: 39px;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+    &__card {
+      padding: 24px;
+      box-sizing: border-box;
+      flex-shrink: 1;
+
+      max-width: 453px;
+      min-width: 267px;
+      height: 265px;
+
+      background-color: white;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+      opacity: 1;
+      transform: translateY(0px);
+
+      transition: all ease-in-out 0.2s;
+
+      &:hover {
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+      }
+      &__header {
+        display: flex;
+        gap: 16px;
+
+        &__avatar {
+          width: 42px;
+          height: 42px;
+        }
+
+        &__info {
+          &__client-name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $black-bg;
+          }
+
+          &__client-position {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #8a8a8a;
+          }
+        }
+      }
+
+      &__review {
+        height: 109px;
+
+        margin-top: 24px;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &__show-more-btn {
+        margin-top: 12px;
+        padding: 0;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  &__show-all-reviews-btn {
+    margin-top: 40px;
+
+    width: 205px;
+    height: 47px;
+
+    background: none;
+    border: 1px solid #8a8a8a;
+    color: $black-bg !important;
+
+    text-align: center !important;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: #ffff65;
+      border: none;
+
+      font-weight: bolder;
+    }
+  }
+}

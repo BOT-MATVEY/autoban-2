@@ -1,0 +1,16 @@
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+
+  padding: 0;
+  white-space: nowrap;
+
+  li {
+    cursor: pointer;
+    transition: color ease-in-out 0.1s;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

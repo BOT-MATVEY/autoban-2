@@ -1,0 +1,10 @@
+.title-container {
+  transition: max-height 1s ease-in-out;
+}
+.title {
+  width: 200px;
+  max-height: 30px;
+
+  background-color: red;
+  transition: max-height 1s ease-in-out;
+}

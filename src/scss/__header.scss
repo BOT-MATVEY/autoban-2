@@ -1,0 +1,255 @@
+@import "./_main";
+@media (max-width: 1400px) {
+  .header {
+    .navigation {
+      display: none !important;
+    }
+
+    &__info {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: 1401px) {
+  .header {
+    &__menu-nav-btns {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__wrapper {
+    &__left-corner,
+    &__right-corner {
+      height: 64px;
+      path {
+      }
+    }
+  }
+
+  .header {
+    height: 64px !important;
+    background-color: aqua;
+    .content {
+      .header__info {
+        .header__search-block {
+          max-width: 170px;
+          min-width: 170px;
+        }
+        .contact-info {
+          .department {
+            display: none;
+          }
+        }
+        .btn {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    &__info {
+      display: none !important;
+    }
+    &__menu-nav-btns {
+      &__phone-btn {
+        display: flex !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .header {
+    &__menu-nav-btns {
+      &__phone-btn {
+        display: none !important;
+      }
+    }
+  }
+}
+.header__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+
+  &__left-corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(-1, 1);
+  }
+  &__right-corner {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 120px);
+  height: 87px;
+  background-color: $black-bg;
+  // margin: 0 60px;
+  @include general-padding(0);
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 97% 100%, 3% 100%);
+
+  &__menu-nav-btns {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    &__phone-btn {
+      position: relative;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 20px;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.header__autoban-logo {
+  width: 169px;
+  height: 41px;
+}
+
+.header__search-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  gap: 8px;
+
+  height: 34px;
+  max-width: 121px;
+  min-width: 121px;
+  border: 1px solid white;
+  padding: 8px 16px;
+
+  box-sizing: border-box;
+  opacity: 0.7;
+
+  transition: border 0.2s ease-in-out;
+
+  svg circle,
+  line {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      circle,
+      line {
+        stroke: $yellow;
+      }
+    }
+
+    border: 1px solid $yellow;
+  }
+
+  .search-icon {
+    width: 15px;
+    height: 16px;
+  }
+
+  .search-input {
+    border-radius: 0px;
+    border: none;
+    max-width: 89%;
+    height: 15px;
+
+    background: none;
+    color: white;
+  }
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 573px;
+  gap: 20px;
+
+  &__social-media {
+    display: flex;
+    gap: 12px;
+
+    .header__social_media_icon {
+      width: 34px;
+      height: 34px;
+
+      border: 1px solid white;
+      box-sizing: border-box;
+
+      opacity: 0.7;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+
+        &.viber-icon {
+          border: 1px solid #8f5db7;
+          svg {
+            path {
+              fill: #8f5db7;
+            }
+          }
+        }
+
+        &.whats-app-icon {
+          border: 1px solid #25d366;
+          path {
+            fill: #25d366;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    white-space: nowrap;
+
+    &:hover {
+    }
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    .telephone-number {
+      font-size: 16px;
+      line-height: 19px;
+
+      transition: color ease-in-out 0.2s;
+
+      & a:hover {
+        color: $yellow !important;
+      }
+    }
+
+    * + p {
+      margin-top: 6px;
+    }
+  }
+}

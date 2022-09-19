@@ -1,0 +1,127 @@
+@media (min-width: 1101px) {
+  .banner {
+    margin-top: 137px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner {
+    overflow: hidden;
+
+    &__info {
+      padding: 40px 0 40px 7%;
+
+      h2 {
+        max-width: 80%;
+
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: -0.02em;
+        text-align: left;
+      }
+    }
+
+    &__images {
+      width: 360px !important;
+
+      &__man-and-truck {
+        transform: scale(0.81);
+        right: -160px !important;
+        bottom: -41px !important;
+      }
+    }
+
+    &__bg {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .banner {
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: center !important;
+
+    &__info {
+      padding-right: 7%;
+      padding-bottom: 20px;
+    }
+
+    &__images {
+      height: 268px;
+      &__man-and-truck {
+        // position: relative;
+        // transform: scale(0.6);
+        right: -178px !important;
+        bottom: -87px !important;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .banner {
+    .banner__images__man-and-truck {
+      transform: scale(0.6);
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include general-margin-top();
+
+  max-width: 1400px;
+  height: 100%;
+  min-height: 368px;
+
+  background-color: #f1f1f1;
+
+  &__info {
+    max-width: 645px;
+    padding-left: 7%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .main-text {
+      margin-top: 16px;
+    }
+  }
+
+  &__images {
+    position: relative;
+    flex-shrink: 0;
+    width: 524px;
+
+    &__man-and-truck {
+      position: absolute;
+      z-index: 1;
+      right: -20px;
+      bottom: 0;
+    }
+  }
+
+  .btn-gray {
+    margin-top: 40px;
+
+    height: 40px;
+    width: 124px;
+
+    text-transform: uppercase;
+
+    background-color: $black-bg;
+    border: 0;
+
+    font-weight: 500;
+
+    cursor: pointer;
+  }
+}

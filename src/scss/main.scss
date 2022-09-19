@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+@import "./__typography.scss";
+@import "./__header.scss";
+@import "./__hero-page.scss";
+@import "./__main.scss";
+@import "./__slider.scss";
+@import "./__usp-cards.scss";
+@import "./__banner.scss";
+@import "./__products.scss";
+@import "./__email-form-banner.scss";
+@import "./_reviews.scss";
+@import "./normalize.css";
+@import "./__slider-undone.scss";
+@import "./__map.scss";
+@import "./_footer.scss";
+@import "./_menu";
+@import "./_colors";
+@import "./_pop-up";
+@import "./_navigation";
+// --------------------------------------COLORS-----------------------------------///
+$black-bg: #2e2e2e;
+$yellow: #ffff00;
+
+//--------------------------------GENERAL-CSS-NORMALIZATION---------------------------///
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  height: 43px;
+  width: 100%;
+
+  padding: 16px 14px;
+  box-sizing: border-box;
+
+  background: none;
+  border: 1px solid white;
+
+  opacity: 0.3;
+  color: white;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    border: 1px solid $yellow;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:not(:placeholder-shown) {
+    color: white;
+    opacity: 1;
+  }
+}
+
+//-----------------------------OFTEN-USED-CLASSES-------------------------------//
+
+.centered-element {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  display: flex;
+  * {
+    display: block;
+    margin: auto auto;
+  }
+}
+
+.reflected-element {
+  --translateY: 0;
+  transform: scaleX(-1) translateY(var(--translateY));
+}
+
+input:focus {
+  outline: none;
+}
+
+.pop-up__bg {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: black;
+  opacity: 0.3;
+  z-index: 201;
+
+  animation-name: menu-bg-animation;
+  animation-duration: 0.3s;
+}
+
+//----------------------------------BUTTONS--------------------------------------------//
+.btn {
+  text-decoration: uppercase;
+  text-align: center;
+  text-transform: uppercase;
+
+  width: 164px;
+  height: 40px;
+
+  background: none;
+  border: 1px solid $yellow;
+  color: $yellow;
+  cursor: pointer;
+
+  transition: all ease-in-out 0.1s;
+  &:hover {
+    background-color: $yellow;
+    color: #2e2e2e;
+  }
+  &:active {
+  }
+}
+
+.btn-dominant {
+  background-color: $yellow;
+  color: $black-bg;
+
+  &:hover {
+    font-weight: bolder;
+  }
+}
+
+.horizontal-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.square-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: none;
+
+  cursor: pointer;
+
+  z-index: 10001;
+
+  svg {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    svg,
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-gray {
+  background-color: $black-bg;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bolder;
+  }
+}
+
+.blocked-button {
+  cursor: default !important;
+  filter: brightness(85%);
+
+  &:hover {
+    font-weight: normal !important;
+  }
+}

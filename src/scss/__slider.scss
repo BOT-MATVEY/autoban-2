@@ -1,0 +1,107 @@
+@media (max-width: 800px) {
+  .slider {
+    &__cards {
+      flex-direction: column;
+      padding: 10px 0 !important;
+      overflow-x: visible !important;
+
+      &__card:nth-last-child(-n + 4) {
+        display: none !important;
+      }
+    }
+
+    &__btn {
+      display: none !important;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  box-sizing: border-box;
+
+  @include general-margin-top();
+  width: 100%;
+
+  &__cards {
+    max-width: 1400px;
+    display: flex;
+    --slider-gap: 20px;
+
+    gap: var(--slider-gap);
+    overflow-x: scroll;
+
+    padding: 15px 15px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      flex-grow: 1;
+
+      min-width: calc(100% / 3 - var(--slider-gap) / 2);
+      height: 100%;
+
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      &__truck-photo {
+        width: 100%;
+        max-height: 232px;
+        min-height: 168px;
+        flex-shrink: 1;
+        flex-grow: 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      .h4 {
+        padding: 8px 10px 24px;
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    top: 50%;
+    left: none;
+    right: -20px;
+    transform: translateY(-24px);
+
+    background-color: white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    &.reflected-element {
+      left: -20px;
+      right: none;
+
+      --translateY: -24px; //Без этой переменной трансформ перезапишется и стрелка не булет перевернутой
+    }
+
+    img {
+      fill: #8a8a8a;
+    }
+  }
+}
